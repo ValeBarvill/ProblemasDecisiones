@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3.9 - Cotizador de Pólizas de Seguro</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header-section">
+            <h1>Problema 3.9</h1>
+            <p>Sistema de cotización automatizado para pólizas de seguro de auto con cargos adicionales acumulativos.</p>
+        </header>
+
+        <section class="form-section">
+            <div class="form-group">
+                <label for="slcPoliza">Tipo de póliza:</label>
+                <select id="slcPoliza">
+                    <option value="A">Cobertura Amplia (A) - Base: $1,200.00</option>
+                    <option value="B">Daños a Terceros (B) - Base: $950.00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="txtEdadConductor">Edad del conductor (años):</label>
+                <input type="number" id="txtEdadConductor" min="1" max="120" placeholder="Ej. 45">
+            </div>
+
+            <div class="form-group">
+                <label for="slcAlcohol">¿Tiene por hábito beber alcohol?</label>
+                <select id="slcAlcohol">
+                    <option value="no">No</option>
+                    <option value="si">Sí (+10% del costo base)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="slcLentes">¿Utiliza lentes para conducir?</label>
+                <select id="slcLentes">
+                    <option value="no">No</option>
+                    <option value="si">Sí (+5% del costo base)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="slcEnfermedad">¿Padece alguna enfermedad (diabetes, deficiencia cardiaca, etc.)?</label>
+                <select id="slcEnfermedad">
+                    <option value="no">No</option>
+                    <option value="si">Sí (+5% del costo base)</option>
+                </select>
+            </div>
+
+            <button class="btn-action" onclick="calcularPoliza()">Cotizar Seguro</button>
+
+            <div id="wrapperResultado" class="result-box"></div>
+        </section>
+
+        <footer>
+            <a href="../index.html" class="btn-back">← Volver al menú principal</a>
+        </footer>
+    </main>
+
+    <script src="../scripts/problema9.js"></script>
+</body>
+</html>

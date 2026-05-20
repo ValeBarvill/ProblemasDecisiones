@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3.8 - Cálculo de Bono Mensual</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header-section">
+            <h1>Problema 3.8</h1>
+            <p>Cálculo automatizado de bono mensual. El sistema evalúa el bono por antigüedad y por sueldo, asignando el monto más alto.</p>
+        </header>
+
+        <section class="form-section">
+            <div class="form-group">
+                <label for="txtSueldoBono">Sueldo mensual base ($):</label>
+                <input type="number" id="txtSueldoBono" min="0" step="0.01" placeholder="Ej. 2500.00">
+            </div>
+
+            <div class="form-group">
+                <label for="txtAntiguedadBono">Antigüedad del trabajador (años):</label>
+                <input type="number" id="txtAntiguedadBono" min="0" step="0.5" placeholder="Ej. 4.5">
+            </div>
+
+            <button class="btn-action" onclick="calcularMayorBono()">Calcular Bono</button>
+
+            <div id="wrapperResultado" class="result-box"></div>
+        </section>
+
+        <footer>
+            <a href="../index.html" class="btn-back">← Volver al menú principal</a>
+        </footer>
+    </main>
+
+    <script src="../scripts/problema8.js"></script>
+</body>
+</html>
